@@ -1,0 +1,3333 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>User Knowledge Modelling &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'UAS';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">User Knowledge Modelling</a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUAS.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/UAS.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>User Knowledge Modelling</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">User Knowledge Modelling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-analisis-mengetahui-tingkat-kepintaran-seseorang">Tujuan Analisis : Mengetahui tingkat kepintaran seseorang</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data">Memahami Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-data-untuk-disimpan-ke-dataframe">Mengambil data untuk disimpan ke dataframe</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#identifikasi-data">Identifikasi Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-distribusi">Tabel Distribusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kualitas-data">Kualitas Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values">Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier">Deteksi Outlier</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#k-tetangga-terdekat-k-nearest-neighbors-k-nn">1. K-Tetangga Terdekat (K-Nearest Neighbors, K-NN)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jarak-jangkauan-reachability-distance">2. Jarak Jangkauan (Reachability Distance)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kepadatan-jangkauan-lokal-local-reachability-density">3. Kepadatan Jangkauan Lokal (Local Reachability Density)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#faktor-outlier-lokal-local-outlier-factor">4. Faktor Outlier Lokal (Local Outlier Factor)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">DATA PREPROCESSING</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-duplikasi-pada-data">mencari duplikasi pada data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-modelling">DATA MODELLING</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-gaussian-naive-bayes">Membuat model gaussian naive bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-knn">Membuat Model KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-classifier-dengan-konsep-ensemble-learning-stacking">Membuat Model Classifier dengan Konsep Ensemble Learning Stacking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-ensemble-learning-stacking-dengan-library-sklearn">Membuat model ensemble learning stacking dengan library sklearn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-ensemble-bagging-classifier">Membuat model ensemble bagging classifier</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="user-knowledge-modelling">
+<h1>User Knowledge Modelling<a class="headerlink" href="#user-knowledge-modelling" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tujuan-analisis-mengetahui-tingkat-kepintaran-seseorang">
+<h1>Tujuan Analisis : Mengetahui tingkat kepintaran seseorang<a class="headerlink" href="#tujuan-analisis-mengetahui-tingkat-kepintaran-seseorang" title="Link to this heading">#</a></h1>
+<p>Tujuan dari analisis ini adalah untuk mengetahui tingkat pengetahuan siswa untuk mata kuliah Mesin listrik DC, hasil yang didapat dari analisis dataset ini adalah untuk mengetahui apakah tingkat pengetahuan siswa tersebut sangat rendah, rendah, menengah dan tinggi, dengan mengetahui tingkat tersebut diharapkan pengajar dapat memberikan strategi pembelajaran yang lebih efektif dan adaptif berdasarkan kebutuhan individu siswa.</p>
+<p>Analisis dari dataset ini juga diharapkan dapat membantu meningkatkan pemahaman tentang faktor-faktor yang mempengaruhi pengetahuan siswa dan memberikan wawasan untuk mengoptimalkan proses pembelajaran</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="memahami-data">
+<h1>Memahami Data<a class="headerlink" href="#memahami-data" title="Link to this heading">#</a></h1>
+<p>Untuk mengetahui tingkat kepintaran seseorang</p>
+<ul class="simple">
+<li><p>Fitur : STG(Tingkat waktu belajar untuk materi objek tujuan)</p></li>
+</ul>
+<ul class="simple">
+<li><p>Fitur : SCG(Tingkat jumlah pengulangan pengguna untuk materi objek tujuan)</p></li>
+</ul>
+<ul class="simple">
+<li><p>Fitur : STR(Tingkat waktu belajar pengguna untuk objek yang berhubungan dengan objek tujuan)</p></li>
+</ul>
+<ul class="simple">
+<li><p>Fitur : LPR(Kinerja ujian pengguna untuk objek terkait dengan objek tujuan)</p></li>
+</ul>
+<ul class="simple">
+<li><p>Fitur : PEG(Kinerja ujian pengguna untuk objek tujuan)</p></li>
+</ul>
+<ul class="simple">
+<li><p>Target : UNS(Tingkat Pengetahuan Pengguna)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mengambil-data-untuk-disimpan-ke-dataframe">
+<h1>Mengambil data untuk disimpan ke dataframe<a class="headerlink" href="#mengambil-data-untuk-disimpan-ke-dataframe" title="Link to this heading">#</a></h1>
+<p>menginstall library ucirepo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ucimlrepo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ucimlrepo in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (0.0.7)
+Requirement already satisfied: pandas&gt;=1.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ucimlrepo) (2.2.2)
+Requirement already satisfied: certifi&gt;=2020.12.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ucimlrepo) (2024.6.2)
+Requirement already satisfied: numpy&gt;=1.23.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (1.26.4)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2024.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2024.1)
+Requirement already satisfied: six&gt;=1.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.16.0)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<p>setelah itu melakukan import ke dataframe</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucimlrepo</span> <span class="kn">import</span> <span class="n">fetch_ucirepo</span> 
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+  
+<span class="c1"># fetch dataset </span>
+<span class="n">datasets</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">257</span><span class="p">)</span> 
+  
+<span class="c1"># data (as pandas dataframes) </span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span> 
+  
+<span class="n">X_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">y_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">X_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="n">X_df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="n">df_main</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_df</span><span class="p">,</span> <span class="n">y_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># variable information </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_main</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      ID   STG   SCG   STR   LPR   PEG       UNS
+0      0  0.00  0.00  0.00  0.00  0.00  very_low
+1      1  0.08  0.08  0.10  0.24  0.90      High
+2      2  0.06  0.06  0.05  0.25  0.33       Low
+3      3  0.10  0.10  0.15  0.65  0.30    Middle
+4      4  0.08  0.08  0.08  0.98  0.24       Low
+..   ...   ...   ...   ...   ...   ...       ...
+398  398  0.90  0.78  0.62  0.32  0.89      High
+399  399  0.85  0.82  0.66  0.83  0.83      High
+400  400  0.56  0.60  0.77  0.13  0.32       Low
+401  401  0.66  0.68  0.81  0.57  0.57    Middle
+402  402  0.68  0.64  0.79  0.97  0.24    Middle
+
+[403 rows x 7 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_main</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+      <th>UNS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>very_low</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.10</td>
+      <td>0.24</td>
+      <td>0.90</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.25</td>
+      <td>0.33</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.15</td>
+      <td>0.65</td>
+      <td>0.30</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.98</td>
+      <td>0.24</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>398</th>
+      <td>398</td>
+      <td>0.90</td>
+      <td>0.78</td>
+      <td>0.62</td>
+      <td>0.32</td>
+      <td>0.89</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>399</td>
+      <td>0.85</td>
+      <td>0.82</td>
+      <td>0.66</td>
+      <td>0.83</td>
+      <td>0.83</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>400</th>
+      <td>400</td>
+      <td>0.56</td>
+      <td>0.60</td>
+      <td>0.77</td>
+      <td>0.13</td>
+      <td>0.32</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>401</th>
+      <td>401</td>
+      <td>0.66</td>
+      <td>0.68</td>
+      <td>0.81</td>
+      <td>0.57</td>
+      <td>0.57</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>402</td>
+      <td>0.68</td>
+      <td>0.64</td>
+      <td>0.79</td>
+      <td>0.97</td>
+      <td>0.24</td>
+      <td>Middle</td>
+    </tr>
+  </tbody>
+</table>
+<p>403 rows × 7 columns</p>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="identifikasi-data">
+<h1>Identifikasi Data<a class="headerlink" href="#identifikasi-data" title="Link to this heading">#</a></h1>
+<p>Konsep macam-macam tipe data</p>
+<p>Atribut adalah bidang data, yang mewakili karakteristik atau fitur objek data. Hal ini berarti atribut, dimensi, fitur, dan variabel yang sering digunakan secara bergantian dalam literatur.</p>
+<ul class="simple">
+<li><p>Nominal attributes berarti atribut yang nilainya berupa simbol atau nama yang merepresentasikan kategori atau status tertentu tanpa urutan yang berarti.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Binary attributes berarti atribut nominal dengan dua kategori atau status, biasanya 0 dan 1.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Ordinal attributes berarti atribut yang nilainya memiliki urutan yang berarti atau ranking, namun selisih antara nilai-nilai tersebut tidak diketahui.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Numeric attributes berarti atribut kuantitatif yang diukur dalam nilai integer atau real.</p></li>
+</ul>
+<p>Mengamati secara langsung dari data yang diperoleh dari Maternal Health Risk dataset dan mendeskripsikan langsung jumlah kolom, nama kolom, jumlah data, missing values, dan type data dari setiap kolom data tersebut</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_main</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 403 entries, 0 to 402
+Data columns (total 7 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   ID      403 non-null    int64  
+ 1   STG     403 non-null    float64
+ 2   SCG     403 non-null    float64
+ 3   STR     403 non-null    float64
+ 4   LPR     403 non-null    float64
+ 5   PEG     403 non-null    float64
+ 6   UNS     403 non-null    object 
+dtypes: float64(5), int64(1), object(1)
+memory usage: 22.2+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>melihat rata-rata, standar deviasi, dll dari dataset User knowledge modelling</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_main</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>403.000000</td>
+      <td>403.000000</td>
+      <td>403.000000</td>
+      <td>403.000000</td>
+      <td>403.000000</td>
+      <td>403.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>201.000000</td>
+      <td>0.353141</td>
+      <td>0.355940</td>
+      <td>0.457655</td>
+      <td>0.431342</td>
+      <td>0.456360</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>116.480327</td>
+      <td>0.212018</td>
+      <td>0.215531</td>
+      <td>0.246684</td>
+      <td>0.257545</td>
+      <td>0.266775</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>100.500000</td>
+      <td>0.200000</td>
+      <td>0.200000</td>
+      <td>0.265000</td>
+      <td>0.250000</td>
+      <td>0.250000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>201.000000</td>
+      <td>0.300000</td>
+      <td>0.300000</td>
+      <td>0.440000</td>
+      <td>0.330000</td>
+      <td>0.400000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>301.500000</td>
+      <td>0.480000</td>
+      <td>0.510000</td>
+      <td>0.680000</td>
+      <td>0.650000</td>
+      <td>0.660000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>402.000000</td>
+      <td>0.990000</td>
+      <td>0.900000</td>
+      <td>0.950000</td>
+      <td>0.990000</td>
+      <td>0.990000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>dari hasil kode diatas saya dapat menyimpulkan bahwa dataset ini memiliki 403 baris data serta memiliki 5 fitur, untuk fitur-fiturnya adalah</p>
+<p>STG, SCG, STR, LPR, PEG</p>
+<p>Mengimport library-library yang akan digunakan untuk tahap selanjutnya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="k">as</span> <span class="n">split</span><span class="p">,</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="k">as</span> <span class="n">split</span><span class="p">,</span> <span class="n">GridSearchCV</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tabel-distribusi">
+<h2>Tabel Distribusi<a class="headerlink" href="#tabel-distribusi" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil semua kolom fitur</span>
+<span class="n">features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="c1"># Menghitung jumlah subplot yang diperlukan</span>
+<span class="n">num_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="n">num_rows</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_features</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># Pembulatan ke atas untuk jumlah baris</span>
+
+<span class="c1"># Membuat subplot sesuai dengan jumlah fitur</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">num_rows</span><span class="o">*</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># Melakukan plotting untuk setiap fitur</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">feature</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">features</span><span class="p">):</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="n">i</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df_main</span><span class="p">[</span><span class="n">feature</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distribution of </span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menghapus subplot yang tidak terpakai</span>
+<span class="k">if</span> <span class="n">num_features</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="n">num_rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Menyesuaikan layout</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Menampilkan plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/bb7aaa1580134f3c6df1a1df6389a34b41743d92e110b1979e9b927b2cf93ff3.png"><img alt="_images/bb7aaa1580134f3c6df1a1df6389a34b41743d92e110b1979e9b927b2cf93ff3.png" src="_images/bb7aaa1580134f3c6df1a1df6389a34b41743d92e110b1979e9b927b2cf93ff3.png" style="width: 1189px; height: 1190px;" /></a>
+</div>
+</div>
+</section>
+<section id="kualitas-data">
+<h2>Kualitas Data<a class="headerlink" href="#kualitas-data" title="Link to this heading">#</a></h2>
+<section id="missing-values">
+<h3>Missing Values<a class="headerlink" href="#missing-values" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>mencari apakah ada missing values dalam dataset</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_main</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ID     0
+STG    0
+SCG    0
+STR    0
+LPR    0
+PEG    0
+UNS    0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>berdasarkan kode diatas, dapat dilihat tidak ada missing values dalam data tersebut</p>
+<p>karena tidak terdapat missing values, kita dapat menganggap bahwa data tersebut telah bersih sehingga tidak diperlukan penginputan missing values, langkah selanjutnya adalah mengecek apakah ada outlier pada dataset tersebut</p>
+</section>
+<section id="deteksi-outlier">
+<h3>Deteksi Outlier<a class="headerlink" href="#deteksi-outlier" title="Link to this heading">#</a></h3>
+<p>Lalu, saya melakukan deteksi outlier, untuk memperbaiki kualitas data.</p>
+<p>Menurut referensi yang didapat dari buku “Data Mining : Concept and Technique”:</p>
+<p>Link: <a class="reference external" href="https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf">https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf</a></p>
+<p>Local Outlier Factor (LOF) adalah metode deteksi outlier yang didasarkan pada kepadatan lokal suatu titik data dalam kaitannya dengan tetangga terdekatnya. Metode ini bertujuan untuk mengidentifikasi outlier lokal dengan membandingkan kepadatan lokal dari suatu titik dengan kepadatan lokal dari tetangga-tetangganya. Berikut adalah komponen utama dan langkah-langkah perhitungan dalam LOF:</p>
+<section id="k-tetangga-terdekat-k-nearest-neighbors-k-nn">
+<h4>1. K-Tetangga Terdekat (K-Nearest Neighbors, K-NN)<a class="headerlink" href="#k-tetangga-terdekat-k-nearest-neighbors-k-nn" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Jarak K (k-distance)</strong>: Jarak dari titik $<span class="math notranslate nohighlight">\( o \)</span><span class="math notranslate nohighlight">\( ke tetangga terdekat ke-k.
+\)</span><span class="math notranslate nohighlight">\(
+\text{k-distance}(o) = \text{dist}(o, o_k)
+\)</span><span class="math notranslate nohighlight">\(
+di mana \)</span><span class="math notranslate nohighlight">\( o_k \)</span><span class="math notranslate nohighlight">\( adalah tetangga terdekat ke-k dari \)</span><span class="math notranslate nohighlight">\( o \)</span>$.</p></li>
+<li><p><strong>Lingkungan Jarak K (k-distance neighborhood)</strong>: Himpunan titik-titik yang berada dalam jarak K dari $<span class="math notranslate nohighlight">\( o \)</span><span class="math notranslate nohighlight">\(.
+\)</span><span class="math notranslate nohighlight">\(
+N_k(o) = \{ o' \mid \text{dist}(o, o') \leq \text{k-distance}(o) \}
+\)</span>$</p></li>
+</ul>
+</section>
+<section id="jarak-jangkauan-reachability-distance">
+<h4>2. Jarak Jangkauan (Reachability Distance)<a class="headerlink" href="#jarak-jangkauan-reachability-distance" title="Link to this heading">#</a></h4>
+<p>Jarak jangkauan dari titik $<span class="math notranslate nohighlight">\( o' \)</span><span class="math notranslate nohighlight">\( ke titik \)</span><span class="math notranslate nohighlight">\( o \)</span><span class="math notranslate nohighlight">\( didefinisikan sebagai:
+\)</span><span class="math notranslate nohighlight">\(
+\text{reachdist}_k(o', o) = \max(\text{k-distance}(o), \text{dist}(o', o))
+\)</span>$</p>
+</section>
+<section id="kepadatan-jangkauan-lokal-local-reachability-density">
+<h4>3. Kepadatan Jangkauan Lokal (Local Reachability Density)<a class="headerlink" href="#kepadatan-jangkauan-lokal-local-reachability-density" title="Link to this heading">#</a></h4>
+<p>Kepadatan jangkauan lokal $<span class="math notranslate nohighlight">\( lrd_k(o) \)</span><span class="math notranslate nohighlight">\( dari titik \)</span><span class="math notranslate nohighlight">\( o \)</span><span class="math notranslate nohighlight">\( adalah kebalikan dari rata-rata jarak jangkauan dari tetangga terdekatnya:
+\)</span><span class="math notranslate nohighlight">\(
+lrd_k(o) = \frac{|N_k(o)|}{\sum_{o' \in N_k(o)} \text{reachdist}_k(o', o)}
+\)</span>$</p>
+</section>
+<section id="faktor-outlier-lokal-local-outlier-factor">
+<h4>4. Faktor Outlier Lokal (Local Outlier Factor)<a class="headerlink" href="#faktor-outlier-lokal-local-outlier-factor" title="Link to this heading">#</a></h4>
+<p>Faktor outlier lokal $<span class="math notranslate nohighlight">\( LOF_k(o) \)</span><span class="math notranslate nohighlight">\( dari titik \)</span><span class="math notranslate nohighlight">\( o \)</span><span class="math notranslate nohighlight">\( adalah rata-rata dari rasio kepadatan jangkauan lokal \)</span><span class="math notranslate nohighlight">\( o \)</span><span class="math notranslate nohighlight">\( terhadap kepadatan jangkauan lokal dari tetangga terdekatnya:
+\)</span><span class="math notranslate nohighlight">\(
+LOF_k(o) = \frac{\sum_{o' \in N_k(o)} \frac{lrd_k(o')}{lrd_k(o)}}{|N_k(o)|}
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Data outlier sering kali mempengaruhi model data secara umum sehingga pengaruh dari data outlier tersebut harus dikurangi atau dihilangkan. Hal ini merujuk kepda <a class="reference external" href="https://ejurnal.its.ac.id/index.php/sains_seni/article/download/22520/3642">https://ejurnal.its.ac.id/index.php/sains_seni/article/download/22520/3642</a></p>
+<p>Proses perhitungan LOF untuk mendeteksi adanya outlier dengan 40 tetangga terdekat menggunakan jarak Euclidean (p=2).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_main_lof</span> <span class="o">=</span> <span class="n">df_main</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Menggunakan semua kolom fitur untuk deteksi outlier</span>
+<span class="n">columns_for_lof</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="c1"># Inisialisasi model LOF</span>
+<span class="n">lof</span> <span class="o">=</span> <span class="n">LocalOutlierFactor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Mendeteksi outlier</span>
+<span class="n">outlier_scores</span> <span class="o">=</span> <span class="n">lof</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">df_main_lof</span><span class="p">[</span><span class="s1">&#39;LOF_Score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">lof</span><span class="o">.</span><span class="n">negative_outlier_factor_</span>
+
+<span class="c1"># Menampilkan DataFrame dengan skor LOF</span>
+<span class="n">df_main_lof</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_main_lof</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+      <th>UNS</th>
+      <th>LOF_Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>very_low</td>
+      <td>1.421226</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.10</td>
+      <td>0.24</td>
+      <td>0.90</td>
+      <td>High</td>
+      <td>1.415524</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.25</td>
+      <td>0.33</td>
+      <td>Low</td>
+      <td>1.102162</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.15</td>
+      <td>0.65</td>
+      <td>0.30</td>
+      <td>Middle</td>
+      <td>1.066710</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.98</td>
+      <td>0.24</td>
+      <td>Low</td>
+      <td>1.331572</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>398</th>
+      <td>398</td>
+      <td>0.90</td>
+      <td>0.78</td>
+      <td>0.62</td>
+      <td>0.32</td>
+      <td>0.89</td>
+      <td>High</td>
+      <td>1.271964</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>399</td>
+      <td>0.85</td>
+      <td>0.82</td>
+      <td>0.66</td>
+      <td>0.83</td>
+      <td>0.83</td>
+      <td>High</td>
+      <td>1.100495</td>
+    </tr>
+    <tr>
+      <th>400</th>
+      <td>400</td>
+      <td>0.56</td>
+      <td>0.60</td>
+      <td>0.77</td>
+      <td>0.13</td>
+      <td>0.32</td>
+      <td>Low</td>
+      <td>1.088017</td>
+    </tr>
+    <tr>
+      <th>401</th>
+      <td>401</td>
+      <td>0.66</td>
+      <td>0.68</td>
+      <td>0.81</td>
+      <td>0.57</td>
+      <td>0.57</td>
+      <td>Middle</td>
+      <td>1.134316</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>402</td>
+      <td>0.68</td>
+      <td>0.64</td>
+      <td>0.79</td>
+      <td>0.97</td>
+      <td>0.24</td>
+      <td>Middle</td>
+      <td>1.236860</td>
+    </tr>
+  </tbody>
+</table>
+<p>403 rows × 8 columns</p>
+</div></div></div>
+</div>
+<p>Menampilkan beberapa data yang teridentifikasi sebagai outlier (dengan skor LOF negatif).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Outlier data:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df_main_lof</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">outlier_scores</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ID </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">, LOF Score: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;LOF_Score&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Outlier data:
+</pre></div>
+</div>
+</div>
+</div>
+<p>berdasarkan kode diatas, dapat dijelaskan bahwa dataset ini tidak terdapat lof sehingga data tersebut sudah bersih</p>
+</section>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-preprocessing">
+<h1>DATA PREPROCESSING<a class="headerlink" href="#data-preprocessing" title="Link to this heading">#</a></h1>
+<p>pada data preprocessing ini, tidak akan ada proses, dikarenakan data tersebut sudah bersih dari outlier dan missing value sehingga lanjut saja ke proces selanjutnya yaitu Data Modelling</p>
+<section id="mencari-duplikasi-pada-data">
+<h2>mencari duplikasi pada data<a class="headerlink" href="#mencari-duplikasi-pada-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_main_lof</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df_main_lof</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+      <th>UNS</th>
+      <th>LOF_Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>very_low</td>
+      <td>1.421226</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.10</td>
+      <td>0.24</td>
+      <td>0.90</td>
+      <td>High</td>
+      <td>1.415524</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.25</td>
+      <td>0.33</td>
+      <td>Low</td>
+      <td>1.102162</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.15</td>
+      <td>0.65</td>
+      <td>0.30</td>
+      <td>Middle</td>
+      <td>1.066710</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.98</td>
+      <td>0.24</td>
+      <td>Low</td>
+      <td>1.331572</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>398</th>
+      <td>398</td>
+      <td>0.90</td>
+      <td>0.78</td>
+      <td>0.62</td>
+      <td>0.32</td>
+      <td>0.89</td>
+      <td>High</td>
+      <td>1.271964</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>399</td>
+      <td>0.85</td>
+      <td>0.82</td>
+      <td>0.66</td>
+      <td>0.83</td>
+      <td>0.83</td>
+      <td>High</td>
+      <td>1.100495</td>
+    </tr>
+    <tr>
+      <th>400</th>
+      <td>400</td>
+      <td>0.56</td>
+      <td>0.60</td>
+      <td>0.77</td>
+      <td>0.13</td>
+      <td>0.32</td>
+      <td>Low</td>
+      <td>1.088017</td>
+    </tr>
+    <tr>
+      <th>401</th>
+      <td>401</td>
+      <td>0.66</td>
+      <td>0.68</td>
+      <td>0.81</td>
+      <td>0.57</td>
+      <td>0.57</td>
+      <td>Middle</td>
+      <td>1.134316</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>402</td>
+      <td>0.68</td>
+      <td>0.64</td>
+      <td>0.79</td>
+      <td>0.97</td>
+      <td>0.24</td>
+      <td>Middle</td>
+      <td>1.236860</td>
+    </tr>
+  </tbody>
+</table>
+<p>403 rows × 8 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-modelling">
+<h1>DATA MODELLING<a class="headerlink" href="#data-modelling" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train_model</span> <span class="o">=</span> <span class="n">df_main_lof</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span><span class="s1">&#39;UNS&#39;</span><span class="p">,</span><span class="s1">&#39;LOF_Score&#39;</span><span class="p">])</span>
+<span class="n">Y_train_model</span> <span class="o">=</span> <span class="n">df_main_lof</span><span class="p">[</span><span class="s1">&#39;UNS&#39;</span><span class="p">]</span>
+
+<span class="n">X_train_model</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.10</td>
+      <td>0.24</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.25</td>
+      <td>0.33</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.15</td>
+      <td>0.65</td>
+      <td>0.30</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.98</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>398</th>
+      <td>0.90</td>
+      <td>0.78</td>
+      <td>0.62</td>
+      <td>0.32</td>
+      <td>0.89</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>0.85</td>
+      <td>0.82</td>
+      <td>0.66</td>
+      <td>0.83</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <th>400</th>
+      <td>0.56</td>
+      <td>0.60</td>
+      <td>0.77</td>
+      <td>0.13</td>
+      <td>0.32</td>
+    </tr>
+    <tr>
+      <th>401</th>
+      <td>0.66</td>
+      <td>0.68</td>
+      <td>0.81</td>
+      <td>0.57</td>
+      <td>0.57</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>0.68</td>
+      <td>0.64</td>
+      <td>0.79</td>
+      <td>0.97</td>
+      <td>0.24</td>
+    </tr>
+  </tbody>
+</table>
+<p>403 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y_train_model</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      very_low
+1          High
+2           Low
+3        Middle
+4           Low
+         ...   
+398        High
+399        High
+400         Low
+401      Middle
+402      Middle
+Name: UNS, Length: 403, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<section id="membuat-model-gaussian-naive-bayes">
+<h2>Membuat model gaussian naive bayes<a class="headerlink" href="#membuat-model-gaussian-naive-bayes" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>lalu menyalin df_main_lof ke dalam df_main_gnb untuk melakukan perhitungan gaussian naive bayes</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_main_gnb</span> <span class="o">=</span> <span class="n">df_main_lof</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_main_gnb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+      <th>UNS</th>
+      <th>LOF_Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>very_low</td>
+      <td>1.421226</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.10</td>
+      <td>0.24</td>
+      <td>0.90</td>
+      <td>High</td>
+      <td>1.415524</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.25</td>
+      <td>0.33</td>
+      <td>Low</td>
+      <td>1.102162</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.15</td>
+      <td>0.65</td>
+      <td>0.30</td>
+      <td>Middle</td>
+      <td>1.066710</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.98</td>
+      <td>0.24</td>
+      <td>Low</td>
+      <td>1.331572</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>398</th>
+      <td>398</td>
+      <td>0.90</td>
+      <td>0.78</td>
+      <td>0.62</td>
+      <td>0.32</td>
+      <td>0.89</td>
+      <td>High</td>
+      <td>1.271964</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>399</td>
+      <td>0.85</td>
+      <td>0.82</td>
+      <td>0.66</td>
+      <td>0.83</td>
+      <td>0.83</td>
+      <td>High</td>
+      <td>1.100495</td>
+    </tr>
+    <tr>
+      <th>400</th>
+      <td>400</td>
+      <td>0.56</td>
+      <td>0.60</td>
+      <td>0.77</td>
+      <td>0.13</td>
+      <td>0.32</td>
+      <td>Low</td>
+      <td>1.088017</td>
+    </tr>
+    <tr>
+      <th>401</th>
+      <td>401</td>
+      <td>0.66</td>
+      <td>0.68</td>
+      <td>0.81</td>
+      <td>0.57</td>
+      <td>0.57</td>
+      <td>Middle</td>
+      <td>1.134316</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>402</td>
+      <td>0.68</td>
+      <td>0.64</td>
+      <td>0.79</td>
+      <td>0.97</td>
+      <td>0.24</td>
+      <td>Middle</td>
+      <td>1.236860</td>
+    </tr>
+  </tbody>
+</table>
+<p>403 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train_model</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_train_model</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+
+<span class="n">target</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;UNS&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Melakukan pemisahan dataset menjadi dua bagian: set data training dan testing sebesar 20% untuk data testing dan 80% untuk data training. X_train untuk data training(features), X_test untuk data testing(features), y_train untuk data training(targets), y_test untuk data testing(targets).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train_model</span><span class="p">,</span> <span class="n">Y_train_model</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">X_test</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>52</th>
+      <td>0.090</td>
+      <td>0.55</td>
+      <td>0.12</td>
+      <td>0.78</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>0.300</td>
+      <td>0.85</td>
+      <td>0.54</td>
+      <td>0.25</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <th>282</th>
+      <td>0.180</td>
+      <td>0.29</td>
+      <td>0.78</td>
+      <td>0.15</td>
+      <td>0.61</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>0.310</td>
+      <td>0.10</td>
+      <td>0.41</td>
+      <td>0.42</td>
+      <td>0.75</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>0.790</td>
+      <td>0.28</td>
+      <td>0.88</td>
+      <td>0.20</td>
+      <td>0.66</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>0.550</td>
+      <td>0.10</td>
+      <td>0.34</td>
+      <td>0.30</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>320</th>
+      <td>0.300</td>
+      <td>0.18</td>
+      <td>0.23</td>
+      <td>0.90</td>
+      <td>0.84</td>
+    </tr>
+    <tr>
+      <th>186</th>
+      <td>0.495</td>
+      <td>0.82</td>
+      <td>0.67</td>
+      <td>0.01</td>
+      <td>0.93</td>
+    </tr>
+    <tr>
+      <th>241</th>
+      <td>0.710</td>
+      <td>0.46</td>
+      <td>0.95</td>
+      <td>0.78</td>
+      <td>0.86</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>0.140</td>
+      <td>0.14</td>
+      <td>0.70</td>
+      <td>0.50</td>
+      <td>0.30</td>
+    </tr>
+  </tbody>
+</table>
+<p>81 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>Mengambil irisan x_train dan y_train dari df_main_gnb berdasarkan kolom ID dan disimpan ke dalam file excel dengan nama main_train.csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mendapatkan irisan antara kolom &#39;ID&#39; dari DataFrame df_main_gnb dan data x_train serta y_train</span>
+<span class="n">df_train</span> <span class="o">=</span> <span class="n">df_main_gnb</span><span class="p">[[</span><span class="s1">&#39;ID&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">features</span><span class="p">),</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">target</span><span class="p">),</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Simpan DataFrame df_train ke dalam file CSV</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;main_train.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mengambil irisan x_test dan y_test dari df_main_gnb berdasarkan kolom ID dan disimpan ke dalam file excel dengan nama main_test.csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mendapatkan irisan antara kolom &#39;ID&#39; dari DataFrame df_main_gnb dan data x_test serta y_test</span>
+<span class="n">df_test</span> <span class="o">=</span> <span class="n">df_main_gnb</span><span class="p">[[</span><span class="s1">&#39;ID&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">features</span><span class="p">),</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">target</span><span class="p">),</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Simpan DataFrame df_test ke dalam file CSV</span>
+<span class="n">df_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;main_test.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Membuat model gaussian naive bayes dengan data training, setelah membuat model berdasarkan data training, lalu memprediksi data testing menggunakan model yang sebelumnya sudah dibuat menggunakan data training.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gaussian_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">gaussian_model</span> <span class="o">=</span> <span class="n">gaussian_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gaussian_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">accuracy_gnb</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Akurasi: </span><span class="si">{</span><span class="n">accuracy_gnb</span><span class="si">:</span><span class="s1">.2%</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi: 86.42%
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mencoba memprediksi menggunakan model gaussian yang telah dibuat sebelumnya dengan data input 0.1, 0.1, 0.15, 0.65, 0.3 yang berasal dari data id ke-3.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hasil Prediksi Class: &#39;</span><span class="p">,</span> <span class="n">gaussian_model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]]))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Prediksi Class:  [&#39;Low&#39;]
+/shared-libs/python3.9/py/lib/python3.9/site-packages/sklearn/base.py:450: UserWarning: X does not have valid feature names, but GaussianNB was fitted with feature names
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<p>Membuat dataframe dari Dataframe dataset yang asli dan disimpan ke df_pred_knn untuk dilakukan prediksi. Menambahkan kolom baru Target_before_prediciton yang diisi dengan data testing dan Predicted_Target yang diisi dengan data hasil prediksi. Menggabungkan kolom ID dari df_test dan df_pred_knn. Mengurutkan df_pred berdasarkan kolom ID. Menampilkan ID, Target_before_prediciton, dan Predicted_target dari df_pred_knn.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat DataFrame df_pred dari y_test dan y_pred</span>
+<span class="n">df_pred_gnb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df_pred_gnb</span><span class="p">[</span><span class="s1">&#39;Target_before_prediction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test</span>
+<span class="n">df_pred_gnb</span><span class="p">[</span><span class="s1">&#39;Predicted_Target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred</span>
+
+<span class="c1"># Menggabungkan kolom &#39;ID&#39; dari df_test dengan DataFrame df_pred_gnb</span>
+<span class="n">df_pred_gnb</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span>
+
+<span class="c1"># Mengurutkan DataFrame berdasarkan kolom &#39;ID&#39;</span>
+<span class="n">df_pred_gnb</span> <span class="o">=</span> <span class="n">df_pred_gnb</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan DataFrame df_pred_gnb yang diurutkan</span>
+<span class="n">df_pred_gnb</span> <span class="o">=</span> <span class="n">df_pred_gnb</span><span class="p">[[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Target_before_prediction&#39;</span><span class="p">,</span> <span class="s1">&#39;Predicted_Target&#39;</span><span class="p">]]</span>
+
+<span class="n">df_pred_gnb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Target_before_prediction</th>
+      <th>Predicted_Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>very_low</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>21</td>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>43</td>
+      <td>Middle</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>47</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>49</td>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>384</td>
+      <td>Low</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>385</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>392</td>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>399</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>400</td>
+      <td>Low</td>
+      <td>Low</td>
+    </tr>
+  </tbody>
+</table>
+<p>81 rows × 3 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="membuat-model-knn">
+<h2>Membuat Model KNN<a class="headerlink" href="#membuat-model-knn" title="Link to this heading">#</a></h2>
+<p>import library yang diperlukan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Menyalin df_main_lof ke dalam variabel df_main_knn untuk dilakukan perhitungan K-Nearest Neighbors (KNN) dan menampilkan df_main_knn yang telah disalin sebelumnya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy dataset untuk menjaga konsistensi</span>
+<span class="n">df_main_knn</span> <span class="o">=</span> <span class="n">df_main_lof</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_main_knn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+      <th>UNS</th>
+      <th>LOF_Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>very_low</td>
+      <td>1.421226</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.10</td>
+      <td>0.24</td>
+      <td>0.90</td>
+      <td>High</td>
+      <td>1.415524</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.25</td>
+      <td>0.33</td>
+      <td>Low</td>
+      <td>1.102162</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.15</td>
+      <td>0.65</td>
+      <td>0.30</td>
+      <td>Middle</td>
+      <td>1.066710</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.98</td>
+      <td>0.24</td>
+      <td>Low</td>
+      <td>1.331572</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>398</th>
+      <td>398</td>
+      <td>0.90</td>
+      <td>0.78</td>
+      <td>0.62</td>
+      <td>0.32</td>
+      <td>0.89</td>
+      <td>High</td>
+      <td>1.271964</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>399</td>
+      <td>0.85</td>
+      <td>0.82</td>
+      <td>0.66</td>
+      <td>0.83</td>
+      <td>0.83</td>
+      <td>High</td>
+      <td>1.100495</td>
+    </tr>
+    <tr>
+      <th>400</th>
+      <td>400</td>
+      <td>0.56</td>
+      <td>0.60</td>
+      <td>0.77</td>
+      <td>0.13</td>
+      <td>0.32</td>
+      <td>Low</td>
+      <td>1.088017</td>
+    </tr>
+    <tr>
+      <th>401</th>
+      <td>401</td>
+      <td>0.66</td>
+      <td>0.68</td>
+      <td>0.81</td>
+      <td>0.57</td>
+      <td>0.57</td>
+      <td>Middle</td>
+      <td>1.134316</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>402</td>
+      <td>0.68</td>
+      <td>0.64</td>
+      <td>0.79</td>
+      <td>0.97</td>
+      <td>0.24</td>
+      <td>Middle</td>
+      <td>1.236860</td>
+    </tr>
+  </tbody>
+</table>
+<p>403 rows × 8 columns</p>
+</div></div></div>
+</div>
+<p>Melakukan pemisahan dataset menjadi dua bagian: set data training dan testing sebesar 20% untuk data testing dan 80% untuk data training. X_train untuk data training(features), X_test untuk data testing(features), y_train untuk data training(targets), y_test untuk data testing(targets).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train_model</span><span class="p">,</span> <span class="n">Y_train_model</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Membuat model K-Nearest Neighbors (KNN) dengan 15 tetangga terdekat menggunakan jarak Euclidean (p=2), setelah membuat model berdasarkan data training, lalu memprediksi data testing menggunakan model yang sebelumnya sudah dibuat menggunakan data training.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi model KNN dengan jumlah tetangga k = 15</span>
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">)</span>
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_knn</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Hitung akurasi</span>
+<span class="n">accuracy_knn</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pred_knn</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Akurasi KNN: </span><span class="si">{</span><span class="n">accuracy_knn</span><span class="si">:</span><span class="s1">.2%</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi KNN: 85.19%
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mencoba memprediksi menggunakan model K-Nearest Neighbors (KNN) yang telah dibuat sebelumnya dengan data input 30, 140, 85, 7, 98, 70 yang berasal dari data id ke-3.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hasil Prediksi Class: &#39;</span><span class="p">,</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]]))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Prediksi Class:  [&#39;Middle&#39;]
+/shared-libs/python3.9/py/lib/python3.9/site-packages/sklearn/base.py:450: UserWarning: X does not have valid feature names, but KNeighborsClassifier was fitted with feature names
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<p>Membuat dataframe dari Dataframe dataset yang asli dan disimpan ke df_pred_knn untuk dilakukan prediksi. Menambahkan kolom baru Target_before_prediciton yang diisi dengan data testing dan Predicted_Target yang diisi dengan data hasil prediksi. Menggabungkan kolom ID dari df_test dan df_pred_knn. Mengurutkan df_pred berdasarkan kolom ID. Menampilkan ID, Target_before_prediciton, dan Predicted_target dari df_pred_knn.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat DataFrame df_pred_knn dari y_test dan y_pred_knn</span>
+<span class="n">df_pred_knn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df_pred_knn</span><span class="p">[</span><span class="s1">&#39;Target_before_prediction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test</span>
+<span class="n">df_pred_knn</span><span class="p">[</span><span class="s1">&#39;Predicted_Target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred_knn</span>
+
+<span class="c1"># Menggabungkan kolom &#39;ID&#39; dari df_test dengan DataFrame df_pred_knn</span>
+<span class="n">df_pred_knn</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span>
+
+<span class="c1"># Mengurutkan DataFrame berdasarkan kolom &#39;ID&#39;</span>
+<span class="n">df_pred_knn</span> <span class="o">=</span> <span class="n">df_pred_knn</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan DataFrame df_pred_knn yang diurutkan</span>
+<span class="n">df_pred_knn</span> <span class="o">=</span> <span class="n">df_pred_knn</span><span class="p">[[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Target_before_prediction&#39;</span><span class="p">,</span> <span class="s1">&#39;Predicted_Target&#39;</span><span class="p">]]</span>
+
+<span class="n">df_pred_knn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Target_before_prediction</th>
+      <th>Predicted_Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>very_low</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>21</td>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>43</td>
+      <td>Middle</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>47</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>49</td>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>384</td>
+      <td>Low</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>385</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>392</td>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>399</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>400</td>
+      <td>Low</td>
+      <td>Low</td>
+    </tr>
+  </tbody>
+</table>
+<p>81 rows × 3 columns</p>
+</div></div></div>
+</div>
+<p>Menampilkan df_diff_knn yang nilai Target_before_prediction dan Predicted_Target berbeda dari df_pred_knn.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Memfilter baris yang memiliki nilai yang berbeda antara kolom &#39;Target_before_prediction&#39; dan &#39;Predicted_Target&#39;</span>
+<span class="n">df_diff_knn</span> <span class="o">=</span> <span class="n">df_pred_knn</span><span class="p">[</span><span class="n">df_pred_knn</span><span class="p">[</span><span class="s1">&#39;Target_before_prediction&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">df_pred_knn</span><span class="p">[</span><span class="s1">&#39;Predicted_Target&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Menampilkan DataFrame yang telah difilter</span>
+<span class="n">df_diff_knn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Target_before_prediction</th>
+      <th>Predicted_Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>very_low</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>43</td>
+      <td>Middle</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>55</td>
+      <td>Low</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>66</td>
+      <td>very_low</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>115</td>
+      <td>Middle</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>123</td>
+      <td>Middle</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>199</td>
+      <td>very_low</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>275</td>
+      <td>Very Low</td>
+      <td>very_low</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>285</td>
+      <td>Middle</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>305</td>
+      <td>Middle</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>327</td>
+      <td>Very Low</td>
+      <td>very_low</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>356</td>
+      <td>Very Low</td>
+      <td>Low</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="membuat-model-classifier-dengan-konsep-ensemble-learning-stacking">
+<h2>Membuat Model Classifier dengan Konsep Ensemble Learning Stacking<a class="headerlink" href="#membuat-model-classifier-dengan-konsep-ensemble-learning-stacking" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">)</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">p1_train</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">)</span>
+<span class="n">c2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">p2_train</span> <span class="o">=</span> <span class="n">c2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">p1_train</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">y_train</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;p1&#39;</span><span class="p">)</span>
+<span class="n">p2_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">p2_train</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">y_train</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;p2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Concatenate predictions and y_train</span>
+<span class="n">df_meta</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">p1_series</span><span class="p">,</span> <span class="n">p2_series</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_meta</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p1&#39;</span><span class="p">,</span> <span class="s1">&#39;p2&#39;</span><span class="p">]</span>
+
+<span class="n">df_meta</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>p1</th>
+      <th>p2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>117</th>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>240</th>
+      <td>Low</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>212</th>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th>206</th>
+      <td>Middle</td>
+      <td>Middle</td>
+    </tr>
+    <tr>
+      <th>355</th>
+      <td>Low</td>
+      <td>Low</td>
+    </tr>
+  </tbody>
+</table>
+<p>322 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_meta</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;df_meta.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_test</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>52</th>
+      <td>0.090</td>
+      <td>0.55</td>
+      <td>0.12</td>
+      <td>0.78</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>0.300</td>
+      <td>0.85</td>
+      <td>0.54</td>
+      <td>0.25</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <th>282</th>
+      <td>0.180</td>
+      <td>0.29</td>
+      <td>0.78</td>
+      <td>0.15</td>
+      <td>0.61</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>0.310</td>
+      <td>0.10</td>
+      <td>0.41</td>
+      <td>0.42</td>
+      <td>0.75</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>0.790</td>
+      <td>0.28</td>
+      <td>0.88</td>
+      <td>0.20</td>
+      <td>0.66</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>0.550</td>
+      <td>0.10</td>
+      <td>0.34</td>
+      <td>0.30</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>320</th>
+      <td>0.300</td>
+      <td>0.18</td>
+      <td>0.23</td>
+      <td>0.90</td>
+      <td>0.84</td>
+    </tr>
+    <tr>
+      <th>186</th>
+      <td>0.495</td>
+      <td>0.82</td>
+      <td>0.67</td>
+      <td>0.01</td>
+      <td>0.93</td>
+    </tr>
+    <tr>
+      <th>241</th>
+      <td>0.710</td>
+      <td>0.46</td>
+      <td>0.95</td>
+      <td>0.78</td>
+      <td>0.86</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>0.140</td>
+      <td>0.14</td>
+      <td>0.70</td>
+      <td>0.50</td>
+      <td>0.30</td>
+    </tr>
+  </tbody>
+</table>
+<p>81 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+
+<span class="c1"># Mengubah nilai string menjadi numerik menggunakan Label Encoding</span>
+<span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+
+
+<span class="n">df_meta</span><span class="p">[</span><span class="s1">&#39;p1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_meta</span><span class="p">[</span><span class="s1">&#39;p1&#39;</span><span class="p">])</span>
+<span class="n">df_meta</span><span class="p">[</span><span class="s1">&#39;p2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_meta</span><span class="p">[</span><span class="s1">&#39;p2&#39;</span><span class="p">])</span>
+
+
+<span class="n">df_meta</span><span class="p">[[</span><span class="s1">&#39;p1&#39;</span><span class="p">,</span> <span class="s1">&#39;p2&#39;</span><span class="p">]]</span>
+
+
+<span class="n">gnb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">gnb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_meta</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+
+<span class="c1"># Membuat prediksi pada set test</span>
+<span class="c1"># meta_predictions = gnb_model.predict(X_test)</span>
+
+
+<span class="c1"># accuracy_meta = accuracy_score(y_test, meta_predictions)</span>
+
+<span class="c1"># print(accuracy_meta)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GaussianNB()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">GaussianNB</label><div class="sk-toggleable__content"><pre>GaussianNB()</pre></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1_test</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">p2_test</span> <span class="o">=</span> <span class="n">c2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">p1_series2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">p1_test</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">y_test</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;p1&#39;</span><span class="p">)</span>
+<span class="n">p2_series2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">p2_test</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">y_test</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;p2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Concatenate predictions and y_train</span>
+<span class="n">df_meta_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">p1_series2</span><span class="p">,</span> <span class="n">p2_series2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_meta_test</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p1&#39;</span><span class="p">,</span> <span class="s1">&#39;p2&#39;</span><span class="p">]</span>
+
+<span class="n">df_meta_test</span><span class="p">[</span><span class="s1">&#39;p1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_meta_test</span><span class="p">[</span><span class="s1">&#39;p1&#39;</span><span class="p">])</span>
+<span class="n">df_meta_test</span><span class="p">[</span><span class="s1">&#39;p2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_meta_test</span><span class="p">[</span><span class="s1">&#39;p2&#39;</span><span class="p">])</span>
+
+<span class="n">df_meta_test</span><span class="p">[[</span><span class="s1">&#39;p1&#39;</span><span class="p">,</span> <span class="s1">&#39;p2&#39;</span><span class="p">]]</span>
+
+
+
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_meta_test</span><span class="p">)</span>
+
+<span class="n">accuracy_meta</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">accuracy_meta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8641975308641975
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;c1.sav&#39;</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;c2.sav&#39;</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">c2</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;meta.sav&#39;</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">gnb_model</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-model-ensemble-learning-stacking-dengan-library-sklearn">
+<h2>Membuat model ensemble learning stacking dengan library sklearn<a class="headerlink" href="#membuat-model-ensemble-learning-stacking-dengan-library-sklearn" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">mlxtend</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mlxtend
+  Downloading mlxtend-0.23.1-py3-none-any.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.4/1.4 MB</span> <span class=" -Color -Color-Red">80.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: pandas&gt;=0.24.2 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from mlxtend) (2.1.4)
+Requirement already satisfied: numpy&gt;=1.16.2 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from mlxtend) (1.23.4)
+Requirement already satisfied: matplotlib&gt;=3.0.0 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from mlxtend) (3.6.0)
+Requirement already satisfied: joblib&gt;=0.13.2 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from mlxtend) (1.2.0)
+Requirement already satisfied: scipy&gt;=1.2.1 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from mlxtend) (1.9.3)
+Requirement already satisfied: scikit-learn&gt;=1.0.2 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from mlxtend) (1.1.2)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from matplotlib&gt;=3.0.0-&gt;mlxtend) (1.0.5)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from matplotlib&gt;=3.0.0-&gt;mlxtend) (1.4.4)
+Requirement already satisfied: pillow&gt;=6.2.0 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from matplotlib&gt;=3.0.0-&gt;mlxtend) (9.2.0)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /shared-libs/python3.9/py-core/lib/python3.9/site-packages (from matplotlib&gt;=3.0.0-&gt;mlxtend) (2.8.2)
+Requirement already satisfied: packaging&gt;=20.0 in /shared-libs/python3.9/py-core/lib/python3.9/site-packages (from matplotlib&gt;=3.0.0-&gt;mlxtend) (21.3)
+Requirement already satisfied: cycler&gt;=0.10 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from matplotlib&gt;=3.0.0-&gt;mlxtend) (0.11.0)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /shared-libs/python3.9/py-core/lib/python3.9/site-packages (from matplotlib&gt;=3.0.0-&gt;mlxtend) (3.0.9)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from matplotlib&gt;=3.0.0-&gt;mlxtend) (4.37.4)
+Requirement already satisfied: tzdata&gt;=2022.1 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from pandas&gt;=0.24.2-&gt;mlxtend) (2022.5)
+Requirement already satisfied: pytz&gt;=2020.1 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from pandas&gt;=0.24.2-&gt;mlxtend) (2022.5)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /shared-libs/python3.9/py/lib/python3.9/site-packages (from scikit-learn&gt;=1.0.2-&gt;mlxtend) (3.1.0)
+Requirement already satisfied: six&gt;=1.5 in /shared-libs/python3.9/py-core/lib/python3.9/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=3.0.0-&gt;mlxtend) (1.16.0)
+Installing collected packages: mlxtend
+Successfully installed mlxtend-0.23.1
+<span class=" -Color -Color-Yellow">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span>
+
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">python -m pip install --upgrade pip</span>
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train_model</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STG</th>
+      <th>SCG</th>
+      <th>STR</th>
+      <th>LPR</th>
+      <th>PEG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.10</td>
+      <td>0.24</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.25</td>
+      <td>0.33</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.15</td>
+      <td>0.65</td>
+      <td>0.30</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.98</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>398</th>
+      <td>0.90</td>
+      <td>0.78</td>
+      <td>0.62</td>
+      <td>0.32</td>
+      <td>0.89</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>0.85</td>
+      <td>0.82</td>
+      <td>0.66</td>
+      <td>0.83</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <th>400</th>
+      <td>0.56</td>
+      <td>0.60</td>
+      <td>0.77</td>
+      <td>0.13</td>
+      <td>0.32</td>
+    </tr>
+    <tr>
+      <th>401</th>
+      <td>0.66</td>
+      <td>0.68</td>
+      <td>0.81</td>
+      <td>0.57</td>
+      <td>0.57</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>0.68</td>
+      <td>0.64</td>
+      <td>0.79</td>
+      <td>0.97</td>
+      <td>0.24</td>
+    </tr>
+  </tbody>
+</table>
+<p>403 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train_model</span><span class="p">,</span> <span class="n">Y_train_model</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span> 
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">mlxtend.classifier</span> <span class="kn">import</span> <span class="n">StackingClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+
+<span class="n">clf1</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span> <span class="s1">&#39;distance&#39;</span><span class="p">)</span>
+<span class="n">clf2</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">clf3</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">sclf</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">classifiers</span><span class="o">=</span><span class="p">[</span><span class="n">clf1</span><span class="p">,</span> <span class="n">clf2</span><span class="p">,</span> <span class="n">clf3</span><span class="p">],</span> <span class="n">meta_classifier</span><span class="o">=</span><span class="n">lr</span><span class="p">,</span> <span class="n">use_probas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">average_probas</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3-fold cross validation:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Melakukan cross-validation untuk setiap classifier dan stacking classifier</span>
+<span class="k">for</span> <span class="n">clf</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">clf1</span><span class="p">,</span> <span class="n">clf2</span><span class="p">,</span> <span class="n">clf3</span><span class="p">,</span> <span class="n">sclf</span><span class="p">],</span> 
+                      <span class="p">[</span><span class="s1">&#39;KNN&#39;</span><span class="p">,</span> 
+                       <span class="s1">&#39;Random Forest&#39;</span><span class="p">,</span> 
+                       <span class="s1">&#39;Naive Bayes&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;StackingClassifier&#39;</span><span class="p">]):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="n">error_score</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">) [</span><span class="si">%s</span><span class="s2">]&quot;</span> 
+              <span class="o">%</span> <span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="n">label</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error for </span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Melatih StackingClassifier pada data training</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">sclf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="c1"># Membuat prediksi pada data test</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">sclf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="c1"># Menghitung akurasi pada set test</span>
+    <span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy of StackingClassifier on test set: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error during fitting or predicting with StackingClassifier: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-fold cross validation:
+
+Accuracy: 0.80 (+/- 0.04) [KNN]
+Accuracy: 0.88 (+/- 0.01) [Random Forest]
+Accuracy: 0.84 (+/- 0.03) [Naive Bayes]
+Accuracy: 0.87 (+/- 0.03) [StackingClassifier]
+Accuracy of StackingClassifier on test set: 0.9012345679012346
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hasil Prediksi Class: &#39;</span><span class="p">,</span> <span class="n">sclf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]]))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Prediksi Class:  [&#39;Middle&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hasil Prediksi Class: &#39;</span><span class="p">,</span> <span class="n">sclf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">0.34</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.87</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">]]))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Prediksi Class:  [&#39;Low&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="c1"># Menyimpan model ke file .sav menggunakan pickle</span>
+<span class="n">model_filename</span> <span class="o">=</span> <span class="s1">&#39;stacking_classifier_model.sav&#39;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">model_filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">model_file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">sclf</span><span class="p">,</span> <span class="n">model_file</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Model saved to </span><span class="si">{</span><span class="n">model_filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model saved to stacking_classifier_model.sav
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stacking_load</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;stacking_classifier_model.sav&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stacking_pred</span> <span class="o">=</span> <span class="n">stacking_load</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]])</span>
+
+<span class="n">stacking_pred</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Middle&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-model-ensemble-bagging-classifier">
+<h2>Membuat model ensemble bagging classifier<a class="headerlink" href="#membuat-model-ensemble-bagging-classifier" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train_model</span><span class="p">,</span> <span class="n">Y_train_model</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">BaggingClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+
+<span class="c1"># Inisialisasi dictionary untuk menyimpan akurasi</span>
+<span class="n">accuracy_results</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Loop untuk n_estimators dari 3 sampai 20</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">51</span><span class="p">):</span>
+    <span class="c1"># Membuat dan melatih BaggingClassifier dengan n_estimators yang berbeda</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">SVC</span><span class="p">(),</span> <span class="n">n_estimators</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Membuat prediksi</span>
+    <span class="n">clf_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    
+    <span class="c1"># Menghitung akurasi</span>
+    <span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">clf_pred</span><span class="p">)</span>
+    
+    <span class="c1"># Menyimpan hasil akurasi</span>
+    <span class="n">accuracy_results</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">accuracy</span>
+
+<span class="c1"># Menampilkan hasil akurasi untuk setiap n_estimators</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">acc</span> <span class="ow">in</span> <span class="n">accuracy_results</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;n_estimators: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1">, Accuracy: </span><span class="si">{</span><span class="n">acc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>n_estimators: 3, Accuracy: 0.8888888888888888
+n_estimators: 4, Accuracy: 0.8765432098765432
+n_estimators: 5, Accuracy: 0.8765432098765432
+n_estimators: 6, Accuracy: 0.8765432098765432
+n_estimators: 7, Accuracy: 0.8765432098765432
+n_estimators: 8, Accuracy: 0.8765432098765432
+n_estimators: 9, Accuracy: 0.8765432098765432
+n_estimators: 10, Accuracy: 0.8765432098765432
+n_estimators: 11, Accuracy: 0.8765432098765432
+n_estimators: 12, Accuracy: 0.8641975308641975
+n_estimators: 13, Accuracy: 0.8765432098765432
+n_estimators: 14, Accuracy: 0.8641975308641975
+n_estimators: 15, Accuracy: 0.8641975308641975
+n_estimators: 16, Accuracy: 0.8765432098765432
+n_estimators: 17, Accuracy: 0.8641975308641975
+n_estimators: 18, Accuracy: 0.8641975308641975
+n_estimators: 19, Accuracy: 0.8641975308641975
+n_estimators: 20, Accuracy: 0.8641975308641975
+n_estimators: 21, Accuracy: 0.8641975308641975
+n_estimators: 22, Accuracy: 0.8641975308641975
+n_estimators: 23, Accuracy: 0.8765432098765432
+n_estimators: 24, Accuracy: 0.8641975308641975
+n_estimators: 25, Accuracy: 0.8641975308641975
+n_estimators: 26, Accuracy: 0.8641975308641975
+n_estimators: 27, Accuracy: 0.8641975308641975
+n_estimators: 28, Accuracy: 0.8641975308641975
+n_estimators: 29, Accuracy: 0.8641975308641975
+n_estimators: 30, Accuracy: 0.8641975308641975
+n_estimators: 31, Accuracy: 0.8641975308641975
+n_estimators: 32, Accuracy: 0.8641975308641975
+n_estimators: 33, Accuracy: 0.8641975308641975
+n_estimators: 34, Accuracy: 0.8641975308641975
+n_estimators: 35, Accuracy: 0.8641975308641975
+n_estimators: 36, Accuracy: 0.8641975308641975
+n_estimators: 37, Accuracy: 0.8641975308641975
+n_estimators: 38, Accuracy: 0.8641975308641975
+n_estimators: 39, Accuracy: 0.8641975308641975
+n_estimators: 40, Accuracy: 0.8641975308641975
+n_estimators: 41, Accuracy: 0.8641975308641975
+n_estimators: 42, Accuracy: 0.8641975308641975
+n_estimators: 43, Accuracy: 0.8641975308641975
+n_estimators: 44, Accuracy: 0.8641975308641975
+n_estimators: 45, Accuracy: 0.8641975308641975
+n_estimators: 46, Accuracy: 0.8641975308641975
+n_estimators: 47, Accuracy: 0.8641975308641975
+n_estimators: 48, Accuracy: 0.8641975308641975
+n_estimators: 49, Accuracy: 0.8641975308641975
+n_estimators: 50, Accuracy: 0.8641975308641975
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="kesimpulan">
+<h1>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h1>
+<p>Model dapat memprediksi dengan benar sekitar 86.42% dari data yang diberikan dengan gaussian naive bayes</p>
+<p>Model dapat memprediksi dengan benar sekitar 85.19% dari data yang diberikan dengan knn</p>
+<p>Model dapat memprediksi dengan benar sekitar 86.42% dari data yang diberikan dengan konsep ensemble learning stacking</p>
+<p>Model dapat memprediksi dengan benar sekitar 90.12% dari data yang diberikan dengan ensemble learning stacking dengan library sklearn</p>
+<p>Berdasarkan model-model yang diperoleh diatas maka saya memutuskan untuk menggunakan ensemble learning stacking dengan library sklearn sebagai model untuk memprediksi pada aplikasi yang saya buat, dikarenakan akurasinya lebih tinggi daripada model lainnya</p>
+<a style='text-decoration:none;line-height:16px;display:flex;color:#5B5B62;padding:10px;justify-content:end;' href='https://deepnote.com?utm_source=created-in-deepnote-cell&projectId=fee8661d-3654-474c-b939-c19e7b08cbbd' target="_blank">
+<img alt='Created in deepnote.com' style='display:inline;max-height:16px;margin:0px;margin-right:7.5px;' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+' > </img>
+Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">User Knowledge Modelling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-analisis-mengetahui-tingkat-kepintaran-seseorang">Tujuan Analisis : Mengetahui tingkat kepintaran seseorang</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data">Memahami Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-data-untuk-disimpan-ke-dataframe">Mengambil data untuk disimpan ke dataframe</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#identifikasi-data">Identifikasi Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-distribusi">Tabel Distribusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kualitas-data">Kualitas Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values">Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier">Deteksi Outlier</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#k-tetangga-terdekat-k-nearest-neighbors-k-nn">1. K-Tetangga Terdekat (K-Nearest Neighbors, K-NN)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jarak-jangkauan-reachability-distance">2. Jarak Jangkauan (Reachability Distance)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kepadatan-jangkauan-lokal-local-reachability-density">3. Kepadatan Jangkauan Lokal (Local Reachability Density)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#faktor-outlier-lokal-local-outlier-factor">4. Faktor Outlier Lokal (Local Outlier Factor)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">DATA PREPROCESSING</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-duplikasi-pada-data">mencari duplikasi pada data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-modelling">DATA MODELLING</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-gaussian-naive-bayes">Membuat model gaussian naive bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-knn">Membuat Model KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-classifier-dengan-konsep-ensemble-learning-stacking">Membuat Model Classifier dengan Konsep Ensemble Learning Stacking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-ensemble-learning-stacking-dengan-library-sklearn">Membuat model ensemble learning stacking dengan library sklearn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-ensemble-bagging-classifier">Membuat model ensemble bagging classifier</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
